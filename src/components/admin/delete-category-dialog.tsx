@@ -53,7 +53,7 @@ export default function DeleteCategoryDialog({
       onClose();
     } catch (error) {
       toast.error("Failed to delete category");
-      console.log(error);
+      console.error(error);
     } finally {
       setLoading(false);
     }

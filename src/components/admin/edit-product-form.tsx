@@ -103,7 +103,7 @@ export default function EditProductForm({
       toast.success("Product updated");
     } catch (error) {
       toast.error("Failed to update product");
-      console.log(error);
+      console.error(error);
     } finally {
       setLoading(false);
     }

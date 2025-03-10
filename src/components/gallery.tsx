@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CategoryType } from "@/lib/types";
-import { getCategories } from "@/actions/categories";
+import { getCategories } from "@/lib/actions";
 import { notFound } from "next/navigation";
 import MasonryLayout from "./masonry-layout";
 

@@ -69,7 +69,7 @@ export default function EditCategoryForm({
       toast.success("Updated Successfully");
     } catch (error) {
       toast.error("Failed to update category");
-      console.log(error);
+      console.error(error);
     } finally {
       setLoading(false);
     }

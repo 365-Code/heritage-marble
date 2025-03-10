@@ -1,5 +1,5 @@
-import { getProducts } from "@/actions/products";
-import { getCategories } from "@/actions/categories";
+import { getProducts } from "@/lib/actions";
+import { getCategories } from "@/lib/actions";
 import AdminProducts from "./AdminProducts";
 import mongoose from "mongoose";
 

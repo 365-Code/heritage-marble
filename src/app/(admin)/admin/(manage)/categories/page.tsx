@@ -1,4 +1,4 @@
-import { getCategories } from "@/actions/categories";
+import { getCategories } from "@/lib/actions";
 import AdminCategories from "./AdminCategories";
 
 export default async function ProductsPage({
