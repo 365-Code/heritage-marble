@@ -1,4 +1,4 @@
-"use server"
+"use server";
 import { apiDefaults } from "@/lib/constant";
 import { connectDB } from "@/lib/db";
 import { Product } from "@/lib/models";
@@ -50,7 +50,8 @@ export async function getProducts(
 
 export async function getCategories(
   page?: number | 1,
-  order?: string | "name"
+  order?: string | "name",
+  lmt?: number
 ): Promise<{
   categories: CategoryType[];
   totalPages: number;
@@ -62,15 +63,15 @@ export async function getCategories(
   const categories = JSON.parse(
     JSON.stringify(
       await Category.find()
-        .limit(limit)
-        .skip(page ? (page - 1) * limit : 0)
+        .limit(lmt || limit)
+        .skip(page ? (page - 1) * (lmt || limit) : 0)
         .sort(orderBy ? { name: orderBy } : { name: -1 })
     )
   );
   const categoryCount = JSON.parse(
     JSON.stringify(await Category.find().countDocuments())
   );
-  return { categories, totalPages: Math.ceil(categoryCount / limit) };
+  return { categories, totalPages: Math.ceil(categoryCount / (lmt || limit)) };
 }
 
 export async function getCategory(

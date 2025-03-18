@@ -34,9 +34,9 @@ export const generateMetadata = async ({
       title: `${formattedCategory} - Shop Now`,
       description: `Find the best deals on ${formattedCategory}. Wide selection and great prices!`,
       images: {
-        url: `/assets/${ctg}/th.jpg`,
+        url: category.imageUrl,
       },
-      url: `https://heritage-marble.com/categories/${ctg}`,
+      url: `${process.env.BASE_URL}/categories/${ctg}`,
       type: "website",
     },
     twitter: {
@@ -55,7 +55,7 @@ const Page = async ({ params }: { params: Promise<PageProps> }) => {
   );
 
   if (!products) {
-    return <div className="text-5xl text-center"> 404 No Products found</div>;
+    return <div className="text-5xl text-center">404 No Products found</div>;
   }
 
   return (

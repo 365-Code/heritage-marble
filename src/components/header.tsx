@@ -65,7 +65,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            className="rounded-full aspect-square w-[48px]"
+            className="rounded-full aspect-square w-[42px]"
             src="/assets/logo.png"
             alt="Heritage Marble Arts"
             width={150}

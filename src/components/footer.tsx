@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -43,7 +43,7 @@ const Footer = () => {
                 href="/#gallery"
                 className="text-slateGray hover:text-champagneGold transition"
               >
-                Products
+                Categories
               </Link>
             </li>
             <li>
@@ -59,28 +59,23 @@ const Footer = () => {
 
         {/* Social Media */}
         <div>
-          <h4 className="text-xl font-semibold text-charcoalBlack dark:text-marbleWhite">Follow Us</h4>
+          <h4 className="text-xl font-semibold text-charcoalBlack dark:text-marbleWhite">
+            Follow Us
+          </h4>
           <div className="mt-4 flex space-x-4 w-fit justify-center">
             <a
               href="https://instagram.com"
               target="_blank"
-              className="text-slateGray hover:text-champagneGold transition"
+              className="text-slateGray hover:text-rose-400 transition"
             >
               <Instagram size={24} />
             </a>
             <a
               href="https://facebook.com"
               target="_blank"
-              className="text-slateGray hover:text-champagneGold transition"
+              className="text-slateGray hover:text-blue-400 transition"
             >
               <Facebook size={24} />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              className="text-slateGray hover:text-champagneGold transition"
-            >
-              <Linkedin size={24} />
             </a>
           </div>
         </div>

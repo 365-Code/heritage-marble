@@ -3,26 +3,26 @@ export const testimonials = [
     name: "Mr. Kishan Bajaj",
     enterprise: "Aditya Enterprises, Yavatmal",
     quote:
-      "Heritage Marble Arts transformed our space with their exquisite craftsmanship. The quality is unmatched!",
+      "Heritage Marble Arts has truly redefined elegance. Their craftsmanship is unparalleled, and the finished work is just breathtaking.",
   },
   {
     name: "Mr. Ashok",
     enterprise: "Globe Real State, Dombivali",
     quote:
-      "The attention to detail in their marble work is phenomenal. Truly a masterpiece!",
+      "I was blown away by the precision and quality of their marble work. It's clear that Heritage Marble Arts is a leader in their field!",
   },
   {
     name: "Shree Prakash Natha Choudhry",
     enterprise:
       "Swami Samarth Guru Panchayatan Sansthan Smarthwadi, Vangini Badlapur",
     quote:
-      "Absolutely stunning craftsmanship! Highly recommend for anyone looking for premium marble art.",
+      "From start to finish, their attention to detail and dedication to perfection was evident. I couldn’t be happier with the results.",
   },
   {
     name: "Aniket ji",
     enterprise: "Dan Infrastructure Boiser, Palghar",
     quote:
-      "Absolutely stunning craftsmanship! Highly recommend for anyone looking for premium marble art.",
+      "Working with Heritage Marble Arts was a fantastic experience. The final product exceeded all expectations, adding a touch of luxury to our project.",
   },
 ];
 

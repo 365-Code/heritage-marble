@@ -7,6 +7,7 @@ import { ProductType } from "@/lib/types";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { fetchProducts } from "@/lib/api";
+import MasonryLayout from "./masonry-layout";
 
 export default function Products({
   initialProducts,
@@ -90,30 +91,26 @@ export default function Products({
       ) : (
         <>
           {/* Masonry Grid Layout */}
-          <Masonry
-            breakpointCols={{ default: 4, 1100: 3, 768: 2, 500: 1 }}
-            className="flex gap-6"
-            columnClassName="flex flex-col gap-6"
-          >
+          <MasonryLayout>
             {products?.map((product) => (
               <Card
                 key={product.id}
-                className="overflow-hidden shadow-md hover:shadow-xl transition-all"
+                className="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
                 <Image
                   src={product.imageUrl}
                   alt={product.name}
                   width={400}
                   height={500}
-                  className="w-full h-auto object-cover rounded-lg cursor-pointer"
+                  className="w-full h-60 object-cover rounded-t-xl cursor-pointer transition-transform duration-300 hover:scale-110"
                   onClick={() => setSelectedImage(product.imageUrl)}
                 />
-                <CardContent className="text-center py-2 font-semibold capitalize">
+                <CardContent className="text-center py-4 px-4 font-semibold capitalize sm:text-lg text-gray-800 dark:text-white">
                   {product.name}
                 </CardContent>
               </Card>
             ))}
-          </Masonry>
+          </MasonryLayout>
 
           {/* Infinite Scroll Trigger */}
           <div ref={observerRef} className="h-10 w-full mt-4"></div>
