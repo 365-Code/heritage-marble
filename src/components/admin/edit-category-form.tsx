@@ -87,6 +87,7 @@ export default function EditCategoryForm({
         <input type="file" accept="image/*" onChange={handleImageChange} />
         {preview && (
           <Image
+            unoptimized={true}
             src={preview}
             alt="Preview"
             width={100}

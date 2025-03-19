@@ -68,6 +68,7 @@ export default function Products({
       {products.length === 0 ? (
         <div className="flex flex-col items-center justify-center text-center p-10">
           <Image
+            unoptimized={true}
             src="/empty-box.svg"
             alt="No products"
             width={200}
@@ -98,6 +99,7 @@ export default function Products({
                 className="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
                 <Image
+                  unoptimized={true}
                   src={product.imageUrl}
                   alt={product.name}
                   width={400}
@@ -130,6 +132,7 @@ export default function Products({
             >
               <div className="max-w-3xl w-full px-4">
                 <Image
+                  unoptimized={true}
                   src={selectedImage}
                   alt="Zoomed Product"
                   width={800}

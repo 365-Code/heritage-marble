@@ -109,6 +109,7 @@ const AdminCategories = ({
               </TableCell>
               <TableCell>
                 <Image
+                  unoptimized={true}
                   width={150}
                   height={150}
                   alt={c.name}

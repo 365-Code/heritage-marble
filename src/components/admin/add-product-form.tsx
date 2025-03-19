@@ -124,6 +124,7 @@ export default function AddProductForm({
       {imagePreview && (
         <div className="flex justify-center">
           <Image
+            unoptimized={true}
             src={imagePreview}
             alt="Preview"
             width={150}

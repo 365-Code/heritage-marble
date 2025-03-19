@@ -63,6 +63,7 @@ export default function AddCategoryForm({
       {imagePreview && (
         <div className="flex justify-center">
           <Image
+            unoptimized={true}
             src={imagePreview}
             alt="Preview"
             width={150}

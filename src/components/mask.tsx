@@ -4,6 +4,7 @@ import React from "react";
 const Mask = ({ image, mask }: { image: string; mask?: string }) => {
   return (
     <Image
+      unoptimized={true}
       width={1000}
       height={1000}
       src={image}

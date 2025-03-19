@@ -10,7 +10,7 @@ import { getCategories } from "@/lib/actions";
 // const breakpoints = { default: 3, 1100: 3, 768: 2, 500: 1 };
 
 const Gallery = async () => {
-  const { categories } = await getCategories(undefined, undefined, 9);
+  const { categories } = await getCategories(undefined, undefined, 6);
 
   if (!categories) return notFound();
 
@@ -27,7 +27,10 @@ const Gallery = async () => {
             ))}
           </MasonryLayout>
           <div className="pointer-events-none w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/90 absolute top-0 left-0">
-            <Link href={"/categories"} className="bottom-0 mb-6 absolute group">
+            <Link
+              href={"/categories"}
+              className="pointer-events-auto p-4 bottom-0 left-1/2 -translate-x-1/2 mb-6 absolute group"
+            >
               {/* <Button size={"lg"} className=""> */}
               View All
               <ChevronDown className="mx-auto group-hover:translate-y-1 transition-all" />
@@ -51,6 +54,7 @@ function CategoryCard({ category }: { category: CategoryType }) {
     >
       <div className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-95">
         <Image
+          unoptimized={true}
           src={category.imageUrl || ""}
           alt={category.name}
           width={600}

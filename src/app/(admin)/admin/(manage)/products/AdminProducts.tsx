@@ -161,6 +161,7 @@ const AdminProducts = ({
               </TableCell>
               <TableCell>
                 <Image
+                  unoptimized={true}
                   width={150}
                   height={150}
                   alt={p.name}
@@ -192,9 +193,7 @@ const AdminProducts = ({
         <PaginationContent className="mt-4">
           {page > 1 && (
             <PaginationItem>
-              <PaginationPrevious
-                onClick={() => handlePaging(page - 1)}
-              />
+              <PaginationPrevious onClick={() => handlePaging(page - 1)} />
             </PaginationItem>
           )}
           {[...Array(totalPages)].map((_, i) => (
@@ -209,9 +208,7 @@ const AdminProducts = ({
           ))}
           {page < totalPages && (
             <PaginationItem>
-              <PaginationNext
-                onClick={() => handlePaging(page + 1)}
-              />
+              <PaginationNext onClick={() => handlePaging(page + 1)} />
             </PaginationItem>
           )}
         </PaginationContent>

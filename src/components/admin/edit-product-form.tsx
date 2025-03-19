@@ -138,6 +138,7 @@ export default function EditProductForm({
       {preview && (
         <div className="flex justify-center">
           <Image
+            unoptimized={true}
             src={preview}
             alt="Preview"
             width={100}

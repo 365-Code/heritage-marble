@@ -39,6 +39,7 @@ const About = () => {
           {/* Right Side: Image */}
           <div className="md:w-1/2">
             <Image
+              unoptimized={true}
               width={600}
               height={600}
               src="/assets/about.jpg"
@@ -75,12 +76,12 @@ const About = () => {
             </p>
 
             {/* Call-to-Action Button */}
-            <Button
+            {/* <Button
               size={"lg"}
               className="mt-6 bg-emeraldGreen text-softBeige hover:bg-champagneGold hover:text-charcoalBlack"
             >
               Learn More
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

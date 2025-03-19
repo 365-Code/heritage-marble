@@ -16,6 +16,14 @@ export default function Header() {
 
   const sections = ["home", "about", "gallery", "contact"];
 
+  useEffect(() => {
+    if (typeof window !== undefined && menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [menuOpen]);
+
   // Track scroll position to toggle fixed header
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -65,6 +73,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
+            unoptimized={true}
             className="rounded-full aspect-square w-[42px]"
             src="/assets/logo.png"
             alt="Heritage Marble Arts"
@@ -126,20 +135,24 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <nav className="md:hidden bg-marbleWhite dark:bg-charcoalBlack absolute w-full top-16 left-0 shadow-md h-screen">
-          {sections.map((section) => (
-            <Link
-              key={section}
-              href={`/#${section}`}
-              className="block px-6 py-3 text-charcoalBlack dark:text-marbleWhite hover:bg-champagneGold transition"
-              onClick={() => setMenuOpen(false)}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </Link>
-          ))}
-        </nav>
-      )}
+      {/* {menuOpen && ( */}
+      <nav
+        className={`md:hidden ${
+          menuOpen ? "h-screen" : "overflow-hidden h-0"
+        } bg-marbleWhite dark:bg-charcoalBlack transition-all absolute w-full top-16 left-0 shadow-md h-screen`}
+      >
+        {sections.map((section) => (
+          <Link
+            key={section}
+            href={`/#${section}`}
+            className="block px-6 py-3 text-charcoalBlack dark:text-marbleWhite hover:bg-champagneGold transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+          </Link>
+        ))}
+      </nav>
+      {/* // )} */}
     </header>
   );
 }

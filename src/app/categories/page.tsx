@@ -11,7 +11,7 @@ const Page = async () => {
   return (
     <div className="py-20 container mx-auto px-6">
       <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-charcoalBlack dark:text-champagneGold mb-10">
-        Explore Our Collections
+      Discover Marble Elegance
       </h1>
       <MasonryLayout breakpoints={{ 1500: 4, 500: 2 }}>
         {categories.map((category) => (

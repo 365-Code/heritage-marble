@@ -62,7 +62,7 @@ const Footer = () => {
           <h4 className="text-xl font-semibold text-charcoalBlack dark:text-marbleWhite">
             Follow Us
           </h4>
-          <div className="mt-4 flex space-x-4 w-fit justify-center">
+          <div className="mt-4 flex space-x-4 md:w-fit justify-center items-center w-full">
             <a
               href="https://instagram.com"
               target="_blank"
