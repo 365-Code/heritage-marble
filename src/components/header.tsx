@@ -139,7 +139,7 @@ export default function Header() {
       <nav
         className={`md:hidden ${
           menuOpen ? "h-screen" : "overflow-hidden h-0"
-        } bg-marbleWhite dark:bg-charcoalBlack transition-all absolute w-full top-16 left-0 shadow-md h-screen`}
+        } bg-marbleWhite dark:bg-charcoalBlack transition-all absolute w-full top-16 left-0 shadow-md`}
       >
         {sections.map((section) => (
           <Link
